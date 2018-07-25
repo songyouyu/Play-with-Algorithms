@@ -8,9 +8,15 @@ public class InsertionSort {
 
     }
 
+    /**
+     * 相比于05中,记录每次外层循环起始的元素,
+     * 内层循环结束后,即找到了起始元素的合适位置,再进行赋值即可
+     */
+
     public static void sort(int[] arr) {
 
         for (int i = 1; i < arr.length; i ++) {
+            // 记录当前循环的第一个元素
             int k = arr[i];
             int j;
             for (j = i; j > 0; j --) {
@@ -32,14 +38,14 @@ public class InsertionSort {
 //        }
     }
 
-    private static void swap(int[] arr, int i, int j) {
-        int k = arr[i];
-        arr[i] = arr[j];
-        arr[j] = k;
-    }
+//    private static void swap(int[] arr, int i, int j) {
+//        int k = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = k;
+//    }
 
     public static void main(String[] args) {
-        int arr[] = {1, 3, 2, 5, 4, 8, 7, 6};
+        int[] arr = {3, 2, 1, 5, 4, 8, 7, 6};
         sort(arr);
         for (int i = 0; i < arr.length; i ++) {
             System.out.print(arr[i]);

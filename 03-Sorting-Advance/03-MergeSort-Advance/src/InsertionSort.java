@@ -9,8 +9,9 @@ public class InsertionSort {
         for (int i = l + 1; i <= r; i ++) {
             int e = arr[i];
             int j = i;
-            for( ; j > l && arr[j-1] - e > 0 ; j--)
-                arr[j] = arr[j-1];
+            for( ; j > l && arr[j-1] - e > 0 ; j--) {
+                arr[j] = arr[j - 1];
+            }
             arr[j] = e;
         }
     }

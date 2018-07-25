@@ -10,6 +10,12 @@ public class MergeSort {
 
     }
 
+    /**
+     * 分之策略:
+     * 把原数组分成若干子数组,对每一个子数组进行排序
+     * 继续把子数组与子数组合并,合并后仍然有序,直到合并全部完成,完成排序
+     */
+
     public static void sort(int[] arr) {
         int n = arr.length;
         sort(arr, 0, n - 1);
@@ -34,16 +40,22 @@ public class MergeSort {
         int i = l;
         int j = mid + 1;
         for (int k = l; k <= r; k ++) {
-            if (i > mid) {              //若左半部分元素已全部处理完
+            //若左半部分元素已全部处理完
+            if (i > mid) {
                 arr[k] = aux[j - l];
                 j ++;
-            } else if (j > r) {         // 若右半部分元素已全部处理完
+            }
+            // 若右半部分元素已全部处理完
+            else if (j > r) {
                 arr[k] = aux[i - l];
                 i ++;
-            } else if (aux[i - l] < aux[j - l]) { // 左半部分所指元素 < 右半部分所指元素
+            }
+            // 左半部分所指元素 < 右半部分所指元素
+            else if (aux[i - l] < aux[j - l]) {
                 arr[k] = aux[i - l];
                 i ++;
-            } else {                              // 左半部分所指元素 >= 右半部分所指元素
+            } else {
+                // 左半部分所指元素 >= 右半部分所指元素
                 arr[k] = aux[j - l];
                 j ++;
             }

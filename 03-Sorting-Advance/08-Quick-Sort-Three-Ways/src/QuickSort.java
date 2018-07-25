@@ -13,16 +13,21 @@ public class QuickSort {
         sort(arr, 0, n - 1);
     }
 
-    // 递归使用快速排序，对arr[l...r]的范围进行排序
+    /**
+     * 递归使用快速排序，对arr[l...r]的范围进行排序
+     */
     private static void sort(int[] arr, int l, int r) {
         if (l >= r) {
             return;
         }
         swap(arr, l, (int)(Math.random()*(r - l + 1) + l));
         int v = arr[l];
-        int lt = l;     // arr[l+1...lt] < v
-        int gt = r + 1; // arr[gt...r] > v
-        int i = l + 1;  // arr[lt+1...i) == v
+        // arr[l+1...lt] < v
+        int lt = l;
+        // arr[gt...r] > v
+        int gt = r + 1;
+        // arr[lt+1...i) == v
+        int i = l + 1;
         while (l < gt) {
             if (arr[i] < v) {
                 swap(arr, i, lt + 1);

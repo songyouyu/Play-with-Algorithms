@@ -8,6 +8,12 @@ public class QuickSort {
 
     }
 
+    /**
+     * 先从数组从取出一个数作为基准数
+     * 将比这个数大的全部放在它的右边,小于或等于它的数全放在它的左边
+     * 再对左右区间进行上述循环,直到各区间只有一个数
+     */
+
     public static void sort(int[] arr) {
         int n = arr.length;
         sort(arr, 0, n - 1);
@@ -21,7 +27,6 @@ public class QuickSort {
         int p = partition(arr, l, r);
         sort(arr, l, p - 1);
         sort(arr, p + 1, r);
-
     }
 
     // 对arr[l...r]部分进行partition操作

@@ -9,6 +9,8 @@ public class BubbleSort {
     }
 
     public static void sort(int[] arr) {
+
+        // 普通冒泡排序算法
 //        for (int i = 0; i < arr.length - 1; i ++) {
 //            for (int j = i + 1; j < arr.length; j ++) {
 //                if (arr[i] > arr[j]) {
@@ -19,6 +21,7 @@ public class BubbleSort {
 //            }
 //        }
 
+        // 冒泡排序的优化
 //        boolean flag = false;
 //        int n = arr.length;
 //        do {

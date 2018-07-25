@@ -22,7 +22,7 @@ public class MergeSort {
 //        }
 
         // 优化1 ：当数组的长度在一定长度时，插入排序要比归并排序快
-        // 15知识一个粗略值，可以自己更优的值
+        // 15只是一个粗略值，可以自己更优的值
         if (r - l <= 15) {
             InsertionSort.insertionSort(arr, l, r);
             return;
