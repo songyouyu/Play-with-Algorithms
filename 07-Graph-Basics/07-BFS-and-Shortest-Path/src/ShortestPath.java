@@ -35,6 +35,11 @@ public class ShortestPath {
      */
     private int[] ord;
 
+    /**
+     * 构造函数, 寻路算法, 寻找图graph从s点到其他点的路径
+     * @param graph
+     * @param s
+     */
     public ShortestPath(Graph graph, int s) {
         this.G = graph;
         assert s >= 0 && s < graph.V();
@@ -48,7 +53,11 @@ public class ShortestPath {
             ord[i] = -1;
         }
 
-        // 无向图最短路径算法,从s开始广度优先遍历所有图
+        /*
+         * 无向图最短路径算法,从s开始广度优先遍历所有图
+         * 广度优先遍历:
+         * 构造函数, 寻路算法, 寻找图graph从s点到其他点的路径
+         */
         Queue<Integer> q = new LinkedList<>();
         q.add(s);
         visited[s] = true;
