@@ -28,7 +28,7 @@ public class QuickSort {
         int gt = r + 1;
         // arr[lt+1...i) == v
         int i = l + 1;
-        while (l < gt) {
+        while (i < gt) {
             if (arr[i] < v) {
                 swap(arr, i, lt + 1);
                 lt ++;
